@@ -1,0 +1,9 @@
+# Enable write mode
+RewriteEngine On
+
+# Block access to all directories
+# which name starts with _ (underscore)
+RewriteRule ^_.* - [F]
+
+ErrorDocument 404 /errors/404.php
+ErrorDocument 500 /errors/500.php
